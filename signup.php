@@ -1,30 +1,47 @@
-<?php 
-if(isset($_POST['name'])){
-    $server = "localhost";
-    $username = "root";
-    $password = "";
 
-    $con = mysqli_connect($server,$username,$password);
-    if(!$con){
-        die("Connection Failed : ".mysqli_connect_error());
-    }
-    $name = $_POST['name'];
+
+<?php 
+
+if (isset($_POST['fname'])) {
+    require 'conn.php';
+
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $username = $_POST['username'];
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    $sql = "INSERT INTO `donate_organ`.`users`(`name`, `email`, `password`) VALUES ('$name','$email','$password')";
-    // echo($sql);
 
-    if($con->query($sql) == true){
-        // echo "Successfully inserted";
+
+    // $sql = "INSERT INTO `donate_organ`.`users`(`name`, `email`, `password`) VALUES ('$name','$email','$password')";
+    $sql = "INSERT INTO `users`(`fname`, `lname`, `username`, `email`, `phone`, `address`, `password`) VALUES ('$fname','$lname','$username','$email','$phone','$address','$password')";
+    $res=mysqli_query($con,$sql); 
+    if($res){
+        echo "sign up successfull";
+
+        // $DOMAIN = $_SERVER['SERVER_NAME'];
+        // $URL = str_replace("signup","index",$_SERVER['REQUEST_URI']);
+
+        echo "<script> location.href='login.php'; </script>";
+      
+
     }
     else{
-        echo "ERROR: $sql <br> $con->error";
-    }
-    $con->close();
+        echo "<script> alert('Error Occuurred,Please try again'); </script>";
+
+                echo "ERROR: $sql <br> $con->error";
+            }
+    // else{
+    //     echo "<script> alert('Error Occuurred,Please try again'); </script>";
+
+    // }
+
 
 }
+
 ?>
 
 
@@ -53,11 +70,22 @@ if(isset($_POST['name'])){
                     </div>
                     <form action="signup.php" method="post">
 
-                        <div class="row align-items-center">
-                            <div class="col mt-4">
-                                <input type="text" name='name' class="form-control" placeholder="Name">
+                        <div class="row align-items-center mt-4">
+                            <div class="col">
+                                <input type="text" name = 'fname' class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="col">
+                                <input type="text" name = 'lname' class="form-control" placeholder="Last Name">
                             </div>
                         </div>
+
+
+                        <div class="row align-items-center">
+                            <div class="col mt-4">
+                                <input type="text" name='username' class="form-control" placeholder="Username">
+                            </div>
+                        </div>
+                        
 
                         <div class="row align-items-center mt-4">
                             <div class="col">
@@ -65,11 +93,17 @@ if(isset($_POST['name'])){
                             </div>
                         </div>
 
-                        <!-- <div class="row align-items-center mt-4">
+                        <div class="row align-items-center mt-4">
                             <div class="col">
                                 <input type="phone" name = 'phone'class="form-control" placeholder="Phone">
                             </div>
-                        </div> -->
+                        </div>
+
+                        <div class="row align-items-center mt-4">
+                            <div class="col">
+                                <input type="text" name = 'address'class="form-control" placeholder="Address">
+                            </div>
+                        </div>
 
 
                         <div class="row align-items-center mt-4">

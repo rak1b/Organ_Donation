@@ -10166,6 +10166,11 @@
     height: 2rem;
     width: 2rem;
   }
+
+  .img-profile {
+    height: 2rem;
+    width: 2rem;
+  }
   
   .topbar {
     height: 4.375rem;
@@ -10438,6 +10443,17 @@
     overflow: hidden;
   }
   
+
+  .sidebar.toggled2 {
+    /* width: 0 !important;
+    overflow: hidden; */
+
+    width: 6.5rem;
+    min-height: 100vh;
+    transition: ease-in .3s;
+    z-index: 1000;
+    position: absolute;
+  }
   .sidebar.toggled #sidebarToggle::after {
     content: '\f105';
     font-family: 'Font Awesome 5 Free';

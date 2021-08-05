@@ -1,18 +1,22 @@
 
 <?php 
 
+session_start();
+
 if (isset($_POST['username'])) {
     require 'conn.php';
 
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    $_SESSION['username'] = $username;
 
     $sql = "SELECT * FROM users WHERE username = '$username' and password = '$password' ";    
     $res = mysqli_query($con, $sql);
 
     $row = mysqli_fetch_array($res);
    
+
 
     $count = mysqli_num_rows($res);
     if($count == 1 ){

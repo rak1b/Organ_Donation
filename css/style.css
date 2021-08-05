@@ -1,0 +1,19 @@
+
+body{
+    min-height: 100vh;
+}
+
+.my_container {
+	padding: 0 3%;
+}
+
+.mycard-header{
+    font-size: 30px !important;
+    border-left: 0.25rem solid #36b9cc !important;
+    border-right: 0.25rem solid #36b9cc !important;
+
+}
+
+.mytable td{
+
+}

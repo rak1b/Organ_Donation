@@ -16,7 +16,7 @@
     <?php include('navbar.php'); ?>
 
     <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
+        <h1 class="display-4">About us</h1>
         <p class="lead">We will update it later</p>
         <hr class="my-4">
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>

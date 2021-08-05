@@ -34,7 +34,8 @@
     }
   });
 
-  // Scroll to top button appear
+  // Scroll to top button appearsidebarToggleTop
+  
   $(document).on('scroll', function() {
     var scrollDistance = $(this).scrollTop();
     if (scrollDistance > 100) {

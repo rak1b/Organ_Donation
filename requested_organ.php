@@ -62,10 +62,10 @@ session_start();
                             <!-- Default Card Example -->
                             <div class="card mb-4">
                                 <div class="font-weight-bold card-header mycard-header border-left-primary pt-3 pb-3 text-center">
-                                    Organs
+                                    Requested Organs
                                 </div>
                                 <div class="card-body justify-content-center">
-                                    <table class="table mytable table-bordered table-responsive text-center">
+                                    <table class="table res_table table-bordered table-responsive text-center">
                                         <thead>
                                             <tr>
                                                 <th scope="col">ID</th>
@@ -73,7 +73,6 @@ session_start();
                                                 <th scope="col">Phone</th>
                                                 <th scope="col">Address</th>
                                                 <th scope="col">Part</th>
-                                                <th scope="col">Other Info</th>
                                                 <th scope="col" colspan="2">Action</th>
                                             </tr>
                                         </thead>
@@ -81,7 +80,7 @@ session_start();
 
                                             <?php
                                             require 'conn.php';
-                                            $sql =     "select * from organs";
+                                            $sql =     "select * from requested";
                                             $result = mysqli_query($con, $sql);
 
 
@@ -102,7 +101,6 @@ session_start();
                                                     <td scope="row"><?php echo $row['address']; ?></td>
                                                     <td scope="row"><?php echo $row['phone']; ?></td>
                                                     <td scope="row"><?php echo $row['part']; ?></td>
-                                                    <td scope="row"><?php echo $row['other_info']; ?></td>
                                                     <td><a href="edit.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
                                                     <td><a href="delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
                                                 </tr>

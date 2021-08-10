@@ -1,6 +1,4 @@
-
-
-<?php 
+<?php
 
 if (isset($_POST['fname'])) {
     require 'conn.php';
@@ -18,22 +16,19 @@ if (isset($_POST['fname'])) {
 
     // $sql = "INSERT INTO `donate_organ`.`users`(`name`, `email`, `password`) VALUES ('$name','$email','$password')";
     $sql = "INSERT INTO `users`(`fname`, `lname`, `username`, `email`, `phone`, `address`, `password`) VALUES ('$fname','$lname','$username','$email','$phone','$address','$password')";
-    $res=mysqli_query($con,$sql); 
-    if($res){
+    $res = mysqli_query($con, $sql);
+    if ($res) {
         echo "sign up successfull";
 
         // $DOMAIN = $_SERVER['SERVER_NAME'];
         // $URL = str_replace("signup","index",$_SERVER['REQUEST_URI']);
 
         echo "<script> location.href='login.php'; </script>";
-      
-
-    }
-    else{
+    } else {
         echo "<script> alert('Error Occuurred,Please try again'); </script>";
 
-                echo "ERROR: $sql <br> $con->error";
-            }
+        echo "ERROR: $sql <br> $con->error";
+    }
     // else{
     //     echo "<script> alert('Error Occuurred,Please try again'); </script>";
 
@@ -58,80 +53,84 @@ if (isset($_POST['fname'])) {
 </head>
 
 <body>
-    <?php include('navbar.php'); ?>
-    <section>
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-8 col-xl-6">
-                    <div class="row">
-                        <div class="col text-center">
-                            <h1>Signup</h1>
-                        </div>
-                    </div>
-                    <form action="signup.php" method="post">
+    <div class="my_container">
 
-                        <div class="row align-items-center mt-4">
-                            <div class="col">
-                                <input type="text" name = 'fname' class="form-control" placeholder="First Name">
-                            </div>
-                            <div class="col">
-                                <input type="text" name = 'lname' class="form-control" placeholder="Last Name">
+        <?php include('navbar.php'); ?>
+        <section>
+            <div class="container mt-5">
+                <div class="row justify-content-center box_shadow">
+                    <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h1>Signup</h1>
                             </div>
                         </div>
+                        <form action="signup.php" method="post">
 
-
-                        <div class="row align-items-center">
-                            <div class="col mt-4">
-                                <input type="text" name='username' class="form-control" placeholder="Username">
-                            </div>
-                        </div>
-                        
-
-                        <div class="row align-items-center mt-4">
-                            <div class="col">
-                                <input type="email" name='email' class="form-control" placeholder="Email">
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center mt-4">
-                            <div class="col">
-                                <input type="phone" name = 'phone'class="form-control" placeholder="Phone">
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center mt-4">
-                            <div class="col">
-                                <input type="text" name = 'address'class="form-control" placeholder="Address">
-                            </div>
-                        </div>
-
-
-                        <div class="row align-items-center mt-4">
-                            <div class="col">
-                                <input type="password" name = 'password' class="form-control" placeholder="Password">
-                            </div>
-                            <div class="col">
-                                <input type="password" name = 'confirm_password' class="form-control" placeholder="Confirm Password">
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-start mt-4">
-                            <div class="col">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input">
-                                        I Read and Accept <a href="https://www.froala.com">Terms and Conditions</a>
-                                    </label>
+                            <div class="row align-items-center mt-4">
+                                <div class="col">
+                                    <input type="text" name='fname' class="form-control" placeholder="First Name">
                                 </div>
-
-                                <button class="btn btn-primary mt-4">Submit</button>
+                                <div class="col">
+                                    <input type="text" name='lname' class="form-control" placeholder="Last Name">
+                                </div>
                             </div>
-                        </div>
-                    </form>
+
+
+                            <div class="row align-items-center">
+                                <div class="col mt-4">
+                                    <input type="text" name='username' class="form-control" placeholder="Username">
+                                </div>
+                            </div>
+
+
+                            <div class="row align-items-center mt-4">
+                                <div class="col">
+                                    <input type="email" name='email' class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center mt-4">
+                                <div class="col">
+                                    <input type="phone" name='phone' class="form-control" placeholder="Phone">
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center mt-4">
+                                <div class="col">
+                                    <input type="text" name='address' class="form-control" placeholder="Address">
+                                </div>
+                            </div>
+
+
+                            <div class="row align-items-center mt-4">
+                                <div class="col">
+                                    <input type="password" name='password' class="form-control" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <input type="password" name='confirm_password' class="form-control" placeholder="Confirm Password">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-start mt-4">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input">
+                                            I Read and Accept <a href="https://www.froala.com">Terms and Conditions</a>
+                                        </label>
+                                    </div>
+
+                                    <button class="btn btn-primary mt-4">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
 </body>
 
 </html>

@@ -27,17 +27,24 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 
-    <ul class="navbar-nav ml-auto" style="background: white;padding: 20px;">
+      <ul class="navbar-nav ml-auto" style="background: white;padding: 20px;">
 
 
         <li class="nav-item active">
           <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
         </li>
 
-
-        <li class="nav-item">
-          <a class="nav-link " href="organs.php">Organs</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="organs_Link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Organs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="organs_Link">
+            <a class="dropdown-item" href="organ_donate.php">Donate</a>
+            <a class="dropdown-item" href="organ_request.php">Request</a>
+          </div>
         </li>
+
+        
 
         <li class="nav-item">
           <a class="nav-link " href="about.php">About Us</a>
@@ -89,7 +96,7 @@ session_start();
             </button>
           </form>
         </li>
-        
+
         <li class="nav-item dropdown">
           <?php if (isset($_SESSION['username'])) {
 

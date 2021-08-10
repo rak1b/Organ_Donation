@@ -1,19 +1,38 @@
-
-body{
-    min-height: 100vh;
+body {
+  min-height: 100vh;
 }
 
 .my_container {
-	padding: 0 3%;
+  padding: 0 3%;
 }
 
-.mycard-header{
-    font-size: 30px !important;
-    border-left: 0.25rem solid #36b9cc !important;
-    border-right: 0.25rem solid #36b9cc !important;
-
+.my_navcontainer {
+  margin: 0 3%;
+}
+.mycard-header {
+  font-size: 30px !important;
+  border-left: 0.25rem solid #36b9cc !important;
+  border-right: 0.25rem soli.myd #36b9cc !important;
 }
 
-.mytable td{
 
+
+.box_shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  padding: 6% 0;
 }
+
+.res_table{
+    width: 50%;
+    margin: auto;
+}
+
+
+/* For Mobile Devices */
+@media only screen and (max-width: 768px) {
+
+    .res_table{
+        width: 100%;
+    }
+  }

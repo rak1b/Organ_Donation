@@ -22,31 +22,47 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-          -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
 
-            <a class="nav-link" href="#" >
-                    <i class="fas fa-fw fa-lungs"></i>
-                    <span>Organs</span>
+           
+                <a class="nav-link " href="users.php">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Users</span>
                 </a>
 
                
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="doctors.php">
                     <i class="fas fa-fw fa-user-md"></i>
                     <span>Doctors</span></a>
             </li>
 
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link " href="users.php">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Users</span>
+            <!-- Organs --> 
+            <li class="nav-item active">
+            <a class="nav-link" href="dashboard_organ.php" >
+                    <i class="fas fa-fw fa-lungs"></i>
+                    <span>Donated Organs</span>
+                </a>
+                
+            </li>
+
+            <li class="nav-item active">
+            <a class="nav-link" href="requested_organ.php" >
+                    <i class="fas fa-fw fa-lungs"></i>
+                    <span>Requested Organs</span>
+                </a>
+                
+            </li>
+
+            <li class="nav-item active">
+            <a class="nav-link" href="user_opinion.php" >
+                    <i class="fas fa-fw fa-lungs"></i>
+                    <span>User's opinions</span>
                 </a>
                 
             </li>

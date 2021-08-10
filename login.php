@@ -54,7 +54,7 @@
 
             // echo print_r($row);       // Print the entire row data
             if ($row['admin'] == 1) {
-                echo "<script> location.href='dashboard.php'; </script>";
+                echo "<script> location.href='Dashboard/home.php'; </script>";
             } else {
                 echo "<script> location.href='home.php'; </script>";
             }

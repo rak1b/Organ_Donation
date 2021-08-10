@@ -16,7 +16,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OD Admin </title>
+    <title>Doctors | OD Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -25,8 +25,8 @@ session_start();
 
     <!-- Custom styles for this template-->
 
-    <link href="css/dashboard.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 
@@ -62,17 +62,15 @@ session_start();
                             <!-- Default Card Example -->
                             <div class="card mb-4">
                                 <div class="font-weight-bold card-header mycard-header border-left-primary pt-3 pb-3 text-center">
-                                    Our Users
+                                    Our Doctors
                                 </div>
                                 <div class="card-body justify-content-center">
                                     <table class="table mytable table-bordered table-responsive text-center">
                                         <thead>
                                             <tr>
-                                                <th scope="col">id</th>
-                                                <th scope="col">First Name</th>
-                                                <th scope="col">Last Name</th>
-                                                <th scope="col">Username</th>
-                                                <th scope="col">Password</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Degree</th>
+                                                <th scope="col">Experienced in</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Phone</th>
                                                 <th scope="col">Address</th>
@@ -83,7 +81,7 @@ session_start();
 
                                             <?php
                                             require 'conn.php';
-                                            $sql =     "select * from users";
+                                            $sql =     "select * from doctors";
                                             $result = mysqli_query($con, $sql);
 
 
@@ -99,11 +97,9 @@ session_start();
                                             ?>
 
                                                 <tr>
-                                                    <td scope="row"><?php echo $row['id']; ?></td>
-                                                    <td scope="row"><?php echo $row['fname']; ?></td>
-                                                    <td scope="row"><?php echo $row['lname']; ?></td>
-                                                    <td scope="row"><?php echo $row['username']; ?></td>
-                                                    <td scope="row"><?php echo $row['password']; ?></td>
+                                                    <td scope="row"><?php echo $row['name']; ?></td>
+                                                    <td scope="row"><?php echo $row['degree']; ?></td>
+                                                    <td scope="row"><?php echo $row['experienced_in']; ?></td>
                                                     <td scope="row"><?php echo $row['email']; ?></td>
                                                     <td scope="row"><?php echo $row['phone']; ?></td>
                                                     <td scope="row"><?php echo $row['address']; ?></td>
@@ -166,14 +162,14 @@ session_start();
 
 
 
-    <script src="assets/jquery/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/jquery/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="assets/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../assets/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/dashboard.js"></script>
+    <script src="../js/dashboard.js"></script>
 
 </body>
 

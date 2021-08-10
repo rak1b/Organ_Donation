@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-user-md"></i>
                 </div>
@@ -13,7 +13,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="home.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -44,7 +44,7 @@
 
             <!-- Organs --> 
             <li class="nav-item active">
-            <a class="nav-link" href="dashboard_organ.php" >
+            <a class="nav-link" href="organs.php" >
                     <i class="fas fa-fw fa-lungs"></i>
                     <span>Donated Organs</span>
                 </a>

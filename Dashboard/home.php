@@ -25,7 +25,7 @@ session_start();
 
     <!-- Custom styles for this template-->
 
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
 
 </head>
 
@@ -304,15 +304,11 @@ session_start();
     </a>
 
 
+    <script src="../assets/jquery/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../js/dashboard.js"></script>
 
-    <script src="assets/jquery/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="assets/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/dashboard.js"></script>
 
 </body>
 

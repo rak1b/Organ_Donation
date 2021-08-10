@@ -25,8 +25,8 @@ session_start();
 
     <!-- Custom styles for this template-->
 
-    <link href="css/dashboard.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 
@@ -62,18 +62,15 @@ session_start();
                             <!-- Default Card Example -->
                             <div class="card mb-4">
                                 <div class="font-weight-bold card-header mycard-header border-left-primary pt-3 pb-3 text-center">
-                                    Our Doctors
+                                    Contact us data
                                 </div>
                                 <div class="card-body justify-content-center">
-                                    <table class="table mytable table-bordered table-responsive text-center">
+                                    <table class="table res_table table-bordered table-responsive text-center">
                                         <thead>
                                             <tr>
+                                                <th scope="col">ID</th>
                                                 <th scope="col">Name</th>
-                                                <th scope="col">Degree</th>
-                                                <th scope="col">Experienced in</th>
-                                                <th scope="col">Email</th>
-                                                <th scope="col">Phone</th>
-                                                <th scope="col">Address</th>
+                                                <th scope="col">Text</th>
                                                 <th scope="col" colspan="2">Action</th>
                                             </tr>
                                         </thead>
@@ -81,7 +78,7 @@ session_start();
 
                                             <?php
                                             require 'conn.php';
-                                            $sql =     "select * from doctors";
+                                            $sql =     "select * from contact";
                                             $result = mysqli_query($con, $sql);
 
 
@@ -97,12 +94,9 @@ session_start();
                                             ?>
 
                                                 <tr>
+                                                    <td scope="row"><?php echo $row['id']; ?></td>
                                                     <td scope="row"><?php echo $row['name']; ?></td>
-                                                    <td scope="row"><?php echo $row['degree']; ?></td>
-                                                    <td scope="row"><?php echo $row['experienced_in']; ?></td>
-                                                    <td scope="row"><?php echo $row['email']; ?></td>
-                                                    <td scope="row"><?php echo $row['phone']; ?></td>
-                                                    <td scope="row"><?php echo $row['address']; ?></td>
+                                                    <td scope="row"><?php echo $row['text']; ?></td>
                                                     <td><a href="edit.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
                                                     <td><a href="delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
                                                 </tr>
@@ -143,7 +137,7 @@ session_start();
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
             </footer>
@@ -162,14 +156,11 @@ session_start();
 
 
 
-    <script src="assets/jquery/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/jquery/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../js/dashboard.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="assets/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/dashboard.js"></script>
 
 </body>
 

@@ -12,6 +12,7 @@ session_start();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -27,7 +28,7 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 
-      <ul class="navbar-nav ml-auto" style="background: white;padding: 20px;">
+    <ul class="navbar-nav ml-auto" style="background: white;padding: 20px;position: relative;z-index: 100;">
 
 
         <li class="nav-item active">
@@ -46,9 +47,7 @@ session_start();
 
         
 
-        <li class="nav-item">
-          <a class="nav-link " href="about.php">About Us</a>
-        </li>
+       
 
         <li class="nav-item">
           <a class="nav-link " href="contact.php">Contact Us</a>

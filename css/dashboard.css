@@ -10884,6 +10884,14 @@
     background-repeat: no-repeat;
   }
 
+  .bg-login {
+    background: url("../img/contact.svg");
+
+    background-position: center;
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+  }
+
   .bg-contact {
     background: url("../img/contact.svg");
 
@@ -10897,6 +10905,14 @@
 
     background-position: center;
     background-size: 400px 400px;
+    background-repeat: no-repeat;
+  }
+
+  .bg-hero {
+    background: url("../img/hero.png");
+
+    background-position: center;
+    /* background-size: 400px 400px; */
     background-repeat: no-repeat;
   }
   

@@ -104,8 +104,8 @@ session_start();
                                                     <td scope="row"><?php echo $row['phone']; ?></td>
                                                     <td scope="row"><?php echo $row['part']; ?></td>
                                                     <td scope="row"><?php echo $row['other_info']; ?></td>
-                                                    <td><a href="edit.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
-                                                    <td><a href="delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
+                                                    <td><a href="donated/update.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
+                                                    <td><a href="donated/delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
                                                 </tr>
                                             <?php
 

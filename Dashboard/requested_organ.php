@@ -102,8 +102,8 @@ session_start();
                                                     <td scope="row"><?php echo $row['address']; ?></td>
                                                     <td scope="row"><?php echo $row['phone']; ?></td>
                                                     <td scope="row"><?php echo $row['part']; ?></td>
-                                                    <td><a href="edit.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
-                                                    <td><a href="delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
+                                                    <td><a href="requested/update.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
+                                                    <td><a href="requested/delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
                                                 </tr>
                                             <?php
 

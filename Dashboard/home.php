@@ -1,9 +1,31 @@
 <?php
 
+require 'conn.php';
 session_start();
+
+function total_count($name, $con)
+{
+    $sql =     "select * from $name ";
+
+    $result = mysqli_query($con, $sql);
+
+
+    if ($result) {
+    } else {
+        echo "Not Working";
+    }
+
+    $total = mysqli_num_rows($result);
+
+    echo $total;
+}
+
+
 
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +75,7 @@ session_start();
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    
+
                     <div class="row">
 
                         <!-- Earnings (Monthly) Card Example -->
@@ -64,7 +86,7 @@ session_start();
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Doctors</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">30</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php total_count('doctors', $con) ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user-md fa-2x text-gray-300"></i>
@@ -80,9 +102,9 @@ session_start();
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Users</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">100</div>
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Users
+                                           
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <?php total_count('users', $con) ?></div></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -102,7 +124,7 @@ session_start();
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php total_count('organs', $con) ?></div>
                                                 </div>
                                                 <!-- <div class="col">
                                                     <div class="progress progress-sm mr-2">
@@ -129,7 +151,7 @@ session_start();
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php total_count('requested', $con) ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>

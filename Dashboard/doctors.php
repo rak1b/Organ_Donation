@@ -62,7 +62,7 @@ session_start();
                             <!-- Default Card Example -->
                             <div class="card mb-4">
                                 <div class="font-weight-bold card-header mycard-header border-left-primary pt-3 pb-3 text-center">
-                                    Our Doctors
+                                    Our Doctors <a href="doctors/add.php"><i class="fa fa-plus-circle"></i></a>
                                 </div>
                                 <div class="card-body justify-content-center">
                                     <table class="table mytable table-bordered table-responsive text-center">
@@ -103,8 +103,8 @@ session_start();
                                                     <td scope="row"><?php echo $row['email']; ?></td>
                                                     <td scope="row"><?php echo $row['phone']; ?></td>
                                                     <td scope="row"><?php echo $row['address']; ?></td>
-                                                    <td><a href="edit.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
-                                                    <td><a href="delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
+                                                    <td><a href="doctors/update.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
+                                                    <td><a href="doctors/delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
                                                 </tr>
                                             <?php
 

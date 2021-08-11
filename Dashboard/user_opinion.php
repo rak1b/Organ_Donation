@@ -70,7 +70,7 @@ session_start();
                                             <tr>
                                                 <th scope="col">ID</th>
                                                 <th scope="col">Name</th>
-                                                <th scope="col">Text</th>
+                                                <th scope="col">Message</th>
                                                 <th scope="col" colspan="2">Action</th>
                                             </tr>
                                         </thead>
@@ -96,7 +96,7 @@ session_start();
                                                 <tr>
                                                     <td scope="row"><?php echo $row['id']; ?></td>
                                                     <td scope="row"><?php echo $row['name']; ?></td>
-                                                    <td scope="row"><?php echo $row['text']; ?></td>
+                                                    <td scope="row"><?php echo $row['message']; ?></td>
                                                     <td><a href="edit.php?id=<?php echo $row['id']; ?>"><i class='fa fa-edit'></i></a></td>
                                                     <td><a href="delete.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td>
                                                 </tr>

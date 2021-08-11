@@ -10877,13 +10877,29 @@
   }
   
   .bg-login-image {
-    /* background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800"); */
     background: url("../img/doc1.svg");
 
     background-position: center;
     background-size: 400px 400px;
     background-repeat: no-repeat;
   }
+
+  .bg-contact {
+    background: url("../img/contact.svg");
+
+    background-position: center;
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+  }
+
+  .bg-organ {
+    background: url("../img/donate.svg");
+
+    background-position: center;
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+  }
+  
   
   .bg-register-image {
     background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");

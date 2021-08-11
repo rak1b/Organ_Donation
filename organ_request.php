@@ -1,29 +1,20 @@
 <?php
 
-if (isset($_POST['fname'])) {
+if (isset($_POST['name'])) {
     require 'conn.php';
 
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $username = $_POST['username'];
-    $email = $_POST['email'];
+    $name = $_POST['name'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
+    $part = $_POST['part'];
 
 
 
     // $sql = "INSERT INTO `donate_organ`.`users`(`name`, `email`, `password`) VALUES ('$name','$email','$password')";
-    $sql = "INSERT INTO `users`(`fname`, `lname`, `username`, `email`, `phone`, `address`, `password`) VALUES ('$fname','$lname','$username','$email','$phone','$address','$password')";
+    $sql = "INSERT INTO `requested`(`name`, `phone`, `address`, `part`) VALUES ('$name','$phone','$address','$part')";
     $res = mysqli_query($con, $sql);
     if ($res) {
-        echo "sign up successfull";
-
-        // $DOMAIN = $_SERVER['SERVER_NAME'];
-        // $URL = str_replace("signup","index",$_SERVER['REQUEST_URI']);
-
-        echo "<script> location.href='login.php'; </script>";
+        echo "<script> alert('Form Submitted'); </script>";
     } else {
         echo "<script> alert('Error Occuurred,Please try again'); </script>";
 
@@ -39,11 +30,6 @@ if (isset($_POST['fname'])) {
 
 ?>
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +41,7 @@ if (isset($_POST['fname'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OD Admin </title>
+    <title>OD | Organ Request</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -77,6 +63,7 @@ if (isset($_POST['fname'])) {
         <?php include 'navbar.php' ?>
     </div>
 
+    
 
 
     <!-- Outer Row -->
@@ -88,36 +75,23 @@ if (isset($_POST['fname'])) {
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row" style="min-height: calc(80vh - 100px);">
-                        <div class="col-lg-6 d-none d-lg-block bg-contact"></div>
+                        <div class="col-lg-6 d-none d-lg-block bg-organ"></div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Create an account.It's Free!</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Request For An Organ </h1>
                                 </div>
-                                <form action="signup.php" method="post">
-
-                                    <div class="row align-items-center mt-4">
-                                        <div class="col">
-                                            <input type="text" name='fname' class="form-control" placeholder="First Name">
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" name='lname' class="form-control" placeholder="Last Name">
-                                        </div>
-                                    </div>
+                                <form action="organ_request.php" method="post">
 
 
                                     <div class="row align-items-center">
                                         <div class="col mt-4">
-                                            <input type="text" name='username' class="form-control" placeholder="Username">
+                                            <input type="text" name='name' class="form-control" placeholder="Name">
                                         </div>
                                     </div>
 
 
-                                    <div class="row align-items-center mt-4">
-                                        <div class="col">
-                                            <input type="email" name='email' class="form-control" placeholder="Email">
-                                        </div>
-                                    </div>
+
 
                                     <div class="row align-items-center mt-4">
                                         <div class="col">
@@ -134,19 +108,19 @@ if (isset($_POST['fname'])) {
 
                                     <div class="row align-items-center mt-4">
                                         <div class="col">
-                                            <input type="password" name='password' class="form-control" placeholder="Password">
-                                        </div>
-                                        <div class="col">
-                                            <input type="password" name='confirm_password' class="form-control" placeholder="Confirm Password">
+                                            <input type="text" name='part' class="form-control" placeholder="Which Organs?">
                                         </div>
                                     </div>
+
+                                   
+
 
                                     <div class="row justify-content-start mt-4">
                                         <div class="col">
                                             <div class="form-check">
                                                 <label class="form-check-label">
                                                     <input type="checkbox" class="form-check-input">
-                                                    I Read and Accept <a href="https://www.froala.com">Terms and Conditions</a>
+                                                    I Read and Accept <a href="">Terms and Conditions</a>
                                                 </label>
                                             </div>
 
@@ -179,12 +153,5 @@ if (isset($_POST['fname'])) {
 </body>
 
 </html>
-
-
-
-
-
-
-
 
 

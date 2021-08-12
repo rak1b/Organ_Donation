@@ -85,13 +85,14 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.php">Login</a>
-                        <a class="collapse-item" href="register.php">Register</a>
-                        <a class="collapse-item" href="forgot-password.php">Forgot Password</a>
+                        <a class="collapse-item" href="../login.php">Login</a>
+                        <a class="collapse-item" href=".../../../signup.php">Register</a>
+                        <a class="collapse-item" href=".../../../forgot-password.php">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.php">404 Page</a>
-                        <a class="collapse-item" href="blank.php">Blank Page</a>
+                        <a class="collapse-item" href="../contact.php">Contact Us</a>
+                        <a class="collapse-item" href="../organ_donate.php">Donate Organ</a>
+                        <a class="collapse-item" href="../organ_request.php">Request Organ</a>
                     </div>
                 </div>
             </li>

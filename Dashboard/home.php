@@ -3,6 +3,10 @@
 require 'conn.php';
 session_start();
 
+require 'permission.php';
+
+
+
 function total_count($name, $con)
 {
     $sql =     "select * from $name ";
@@ -103,8 +107,9 @@ function total_count($name, $con)
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Users
-                                           
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <?php total_count('users', $con) ?></div></div>
+
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800"> <?php total_count('users', $con) ?></div>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>

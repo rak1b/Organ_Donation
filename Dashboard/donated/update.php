@@ -1,6 +1,7 @@
 <?php
 require '../conn.php';
 
+
 $id = $_GET['id'];
 
 $sql = "select * from `organs` WHERE id = '$id';";

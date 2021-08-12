@@ -2,6 +2,7 @@
 require '../conn.php';
 
 
+
 $id = $_GET['id'];
 
 $sql = "DELETE FROM `organs` WHERE id = '$id';";

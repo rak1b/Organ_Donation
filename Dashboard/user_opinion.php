@@ -1,6 +1,10 @@
 <?php
 
 session_start();
+require 'conn.php';
+
+require 'permission.php';
+
 
 
 ?>

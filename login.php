@@ -112,7 +112,7 @@
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="">Forgot Password?</a>
+                                    <a class="small" href="./reset_pass.php">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
                                     <a class="small" href="signup.php">Create an Account!</a>

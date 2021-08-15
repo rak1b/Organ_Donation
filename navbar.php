@@ -14,13 +14,14 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 
+
 </head>
 
 <body>
 
 
   <nav class="navbar border-left-info navbar-expand-lg navbar-light bg-white mb-3 mt-3 shadow" style="height: 82px;">
-    <a class="navbar-brand" href="#">Organ Donation</a>
+    <a class="navbar-brand" href="home.php">Organ Donation</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -88,11 +89,12 @@ session_start();
 
         ?>
         <li>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary" type="button">
+          <form class="form-inline my-2 my-lg-0" action="search.php">
+            <input class="form-control mr-sm-2" name='query' type="search" placeholder="Search Doctors .." aria-label="Search">
+            <button class="btn btn-primary" type="submit">
               <i class="fas fa-search fa-sm"></i>
             </button>
+            <!-- <input type="submit"> -->
           </form>
         </li>
 

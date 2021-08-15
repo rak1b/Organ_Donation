@@ -28,7 +28,7 @@ require 'permission.php';
 
     <!-- Custom styles for this template-->
 
-    
+
     <link href="../css/dashboard.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 
@@ -128,7 +128,7 @@ require 'permission.php';
                                 </div>
                             </div>
 
-                            ]
+                            
 
                         </div>
 
@@ -151,7 +151,7 @@ require 'permission.php';
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; 2021 - All Right Reserved</span>
                     </div>
                 </div>
             </footer>

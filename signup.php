@@ -177,7 +177,7 @@ if (isset($_POST['fname'])) {
     <script src="js/dashboard.js"></script>
 
 </body>
-<!-- test -->
+
 </html>
 
 

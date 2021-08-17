@@ -40,7 +40,6 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $_SESSION['username'] = $username;
 
         $sql = "SELECT * FROM users WHERE username = '$username' and password = '$password' ";
         $res = mysqli_query($con, $sql);
@@ -51,6 +50,8 @@
 
         $count = mysqli_num_rows($res);
         if ($count == 1) {
+            $_SESSION['username'] = $row['username'];
+
 
             // echo print_r($row);       // Print the entire row data
             if ($row['admin'] == 1) {
@@ -59,9 +60,9 @@
                 echo "<script> location.href='home.php'; </script>";
             }
         } else {
-            echo "<script> alert('login failed'); </script>";
+            echo "<script> alert('Incorrect Username or Password'); </script>";
 
-            echo "ERROR: $sql <br> $con->error";
+            echo "<br> $con->error";
         }
     }
 
